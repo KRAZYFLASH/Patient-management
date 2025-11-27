@@ -20,8 +20,9 @@ FROM eclipse-temurin:21-jre-jammy AS runner
 WORKDIR /app
 
 # Salin jar hasil build dari stage builder
-COPY --from=builder /app/target/patient-service-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=builder /app/target/billing-service-0.0.1-SNAPSHOT.jar ./app.jar
 
-EXPOSE 4000
+EXPOSE 4001
+EXPOSE 9001
 
 ENTRYPOINT ["java", "-jar", "app.jar"]

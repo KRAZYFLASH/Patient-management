@@ -1,0 +1,10 @@
+POST http://localhost:4000/patients
+Content-Type: application/json
+
+{
+  "name": "Rapinhaaas",
+  "email": "tesT_billing_account21@chelsea.com",
+  "address": "123 london",
+  "dateOfBirth": "1995-09-09",
+  "registeredDate": "2024-11-28"
+}
