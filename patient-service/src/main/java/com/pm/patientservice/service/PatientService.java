@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import billing.BillingServiceGrpc;
 import com.pm.patientservice.grpc.BillingServiceGrpcClient;
+import com.pm.patientservice.kafka.KafkaProducer;
 import org.springframework.stereotype.Service;
 
 import com.pm.patientservice.dto.PatientRequestDTO;
@@ -21,12 +22,14 @@ import com.pm.patientservice.repository.PatientRepository;
 public class PatientService {
     private final PatientRepository patientRepository;
     private final BillingServiceGrpcClient billingServiceGrpcClient;
+    private final KafkaProducer kafkaProducer;
 
     public PatientService(PatientRepository patientRepository,
-                          BillingServiceGrpcClient billingServiceGrpcClient) {
+                          BillingServiceGrpcClient billingServiceGrpcClient, KafkaProducer kafkaProducer) {
 
         this.patientRepository = patientRepository;
         this.billingServiceGrpcClient = billingServiceGrpcClient;
+        this.kafkaProducer = kafkaProducer;
     }
 
     public List<PatientResponseDTO> getAllPatients() {
@@ -46,6 +49,9 @@ public class PatientService {
         );
 
         billingServiceGrpcClient.createBillingAccount(newPatient.getId().toString(), newPatient.getName(), newPatient.getEmail());
+
+        kafkaProducer.sendEvent(newPatient);
+
         return PatientMapper.toDTO(newPatient);
     }
 
