@@ -407,6 +407,96 @@
             "type": "aws:cdk:logicalId",
             "data": "PatientServiceSecurityGroup547BE1F2"
           }
+        ],
+        "/LocalStack/ApiGatewayTaskDefinition/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayTaskDefinitionTaskRole78FC06E2"
+          }
+        ],
+        "/LocalStack/ApiGatewayTaskDefinition/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayTaskDefinitionBB9A2505"
+          }
+        ],
+        "/LocalStack/ApiGatewayTaskDefinition/ExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayTaskDefinitionExecutionRoleE78CB745"
+          }
+        ],
+        "/LocalStack/ApiGatewayTaskDefinition/ExecutionRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayTaskDefinitionExecutionRoleDefaultPolicy3FBBB1F9"
+          }
+        ],
+        "/LocalStack/ApiGatewayLogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayLogGroupA9770429"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLB661D42EC"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLBSecurityGroup0E508841"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LB/SecurityGroup/to LocalStackApiGatewayServiceSecurityGroupA6856A2F:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLBSecurityGrouptoLocalStackApiGatewayServiceSecurityGroupA6856A2F40042A2C5523"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LB/PublicListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLBPublicListenerA86B9BC4"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LB/PublicListener/ECSGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLBPublicListenerECSGroup0BFE5495"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/LoadBalancerDNS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceLoadBalancerDNS40D66446"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/ServiceURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceServiceURL8E0540A6"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayService4908847F"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceSecurityGroup867C9DB1"
+          }
+        ],
+        "/LocalStack/ApiGatewayService/Service/SecurityGroup/from LocalStackApiGatewayServiceLBSecurityGroupA8FB7638:4004": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ApiGatewayServiceSecurityGroupfromLocalStackApiGatewayServiceLBSecurityGroupA8FB763840041EC488F1"
+          }
         ]
       },
       "displayName": "LocalStack"

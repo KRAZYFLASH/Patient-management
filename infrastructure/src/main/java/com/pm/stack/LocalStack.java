@@ -73,6 +73,7 @@ public class LocalStack extends Stack {
         patientService.getNode().addDependency(billingsService);
         patientService.getNode().addDependency(mskCluster);
 
+        createApiGatewayService();
     }
 
     private Vpc createVpc(){
@@ -115,7 +116,7 @@ public class LocalStack extends Stack {
     private CfnCluster createMskCluster() {
         return CfnCluster.Builder.create(this, "MskCluster")
                 .clusterName("kafka-cluster")
-                .kafkaVersion("2.8.0")
+                .kafkaVersion("3.8.0")
                 .numberOfBrokerNodes(2)
                 .brokerNodeGroupInfo(
                         CfnCluster.BrokerNodeGroupInfoProperty.builder()
@@ -231,9 +232,9 @@ public class LocalStack extends Stack {
                                 .build()))
                         .build();
 
-        taskDefinition.addContainer("APIGgatewayContainer", containerOptions);
+        taskDefinition.addContainer("APIGatewayContainer", containerOptions);
 
-        ApplicationLoadBalancedFargateService apigateway =
+        ApplicationLoadBalancedFargateService apiGateway =
                 ApplicationLoadBalancedFargateService.Builder.create(this, "ApiGatewayService")
                         .cluster(ecsCluster)
                         .serviceName("api-gateway")
